@@ -10,6 +10,7 @@ export function Room({ children }: { children: ReactNode }) {
   return (
     <RoomProvider id="my-room" initialPresence={{
       cursor:null,
+       // @ts-ignore
       cursorColor:null,
       editingText:null,
     }}
