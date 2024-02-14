@@ -1,4 +1,4 @@
-import { createClient } from "@liveblocks/client";
+import { LiveMap, createClient } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
   
 const client = createClient({
@@ -9,8 +9,9 @@ const client = createClient({
 // Presence represents the properties that exist on every user in the Room
 // and that will automatically be kept in sync. Accessible through the
 // `user.presence` property. Must be JSON-serializable.
-type Presence = {
-  // cursor: { x: number, y: number } | null,
+export type Presence = {
+   cursor: { x: number, y: number } | null,
+   message:string|null;
   // ...
 };
 
@@ -21,6 +22,7 @@ type Presence = {
 type Storage = {
   // author: LiveObject<{ firstName: string, lastName: string }>,
   // ...
+  canvasObjects:LiveMap<string,any>
 };
 
 // Optionally, UserMeta represents static/readonly metadata on each user, as

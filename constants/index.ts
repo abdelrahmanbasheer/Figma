@@ -193,7 +193,7 @@ export const shortcuts = [
   },
   {
     key: "4",
-    name: "Reactions",
-    shortcut: "E",
+    name: "Delete",
+    shortcut: "DEL",
   },
 ];

@@ -15,7 +15,7 @@ export type CursorState =
   | {
       mode: CursorMode.Chat;
       message: string;
-      previousMessage: string | null;
+      previousMessage: string | null ;
     }
   | {
       mode: CursorMode.ReactionSelector;
@@ -48,15 +48,7 @@ export type ShapeData = {
   objectId: string | undefined;
 };
 
-export type Attributes = {
-  width: string;
-  height: string;
-  fontSize: string;
-  fontFamily: string;
-  fontWeight: string;
-  fill: string;
-  stroke: string;
-};
+
 
 export type ActiveElement = {
   name: string;
@@ -124,11 +116,7 @@ export type ShapesMenuProps = {
   imageInputRef: any;
 };
 
-export type Presence = any;
 
-export type LiveCursorProps = {
-  others: readonly User<Presence, BaseUserMeta>[];
-};
 
 export type CanvasMouseDown = {
   options: fabric.IEvent;
@@ -165,6 +153,25 @@ export type CanvasObjectModified = {
 export type CanvasPathCreated = {
   options: (fabric.IEvent & { path: CustomFabricObject<fabric.Path> }) | any;
   syncShapeInStorage: (shape: fabric.Object) => void;
+};
+export type Attributes={
+  width:string,
+    height:string,
+    fontSize:string,
+    fontFamily:string,
+    fontWeight:string,
+    fill:string
+    stroke:string,
+}
+
+// fill:`#${string}`
+//stroke:`#${string}`
+export type ColorProps = {
+  inputRef: any;
+  attribute: string;
+  placeholder: string;
+  attributeType: string;
+  handleInputChange: (property: string, value: string) => void;
 };
 
 export type CanvasSelectionCreated = {

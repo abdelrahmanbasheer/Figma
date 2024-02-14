@@ -14,6 +14,7 @@ setCursorState({
         if(e.key==="Enter"){
         setCursorState({
             mode:CursorMode.Chat,
+             // @ts-ignore
             previousMessage:cursorState.message,
             message:"",
         })
@@ -28,7 +29,7 @@ setCursorState({
         {cursorState.mode===CursorMode.Chat && 
         <>
         <CursorSVG color='#000'/>
-        <div className='absolute left-2 top-5 bg-blue-500 px-4 py-2 text-sm leading-relaxed text-white rounded-[20px]'>
+        <div className='absolute left-2 top-5 bg-blue-500 px-4 py-2 text-sm leading-relaxed text-white rounded-[20px]' >
         {cursorState.previousMessage &&(
             <div>
                 {cursorState.previousMessage}
